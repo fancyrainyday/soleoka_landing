@@ -516,3 +516,10 @@ body {
     width: 100%;
   }
 }
+
+/* 기존 styles.css 내용 전부 복사 (변경 없음) */
+
+/* 추가: 토스트 애니메이션 부드럽게 */
+#toastNotification .rounded-2xl {
+  transition: all 0.3s ease;
+}
