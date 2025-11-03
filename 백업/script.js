@@ -1,9 +1,9 @@
+// Toast Notification Management
 let toastTimeout
-let hasUserInteracted = false
 
 function showToast() {
   const toast = document.getElementById("toastNotification")
-  if (toast && hasUserInteracted) {
+  if (toast) {
     toast.style.transform = "translateY(0)"
 
     // Auto-hide after 10 seconds
@@ -21,8 +21,12 @@ function closeToast() {
   }
 }
 
+// Login Modal Management
 function openLoginModal() {
-  window.location.href = "https://soleoka.com/bbs/register"
+  const modal = document.getElementById("loginModal")
+  if (modal) {
+    modal.classList.remove("hidden")
+  }
 }
 
 function closeLoginModal() {
@@ -43,28 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  // Show toast on first user interaction (drag/scroll)
-  document.addEventListener(
-    "touchmove",
-    () => {
-      if (!hasUserInteracted) {
-        hasUserInteracted = true
-        showToast()
-      }
-    },
-    { once: true },
-  )
-
-  document.addEventListener(
-    "wheel",
-    () => {
-      if (!hasUserInteracted) {
-        hasUserInteracted = true
-        showToast()
-      }
-    },
-    { once: true },
-  )
+  // Show toast after 2 seconds
+  setTimeout(() => {
+    showToast()
+  }, 2000)
 
   // Add smooth scroll behavior
   document.documentElement.style.scrollBehavior = "smooth"

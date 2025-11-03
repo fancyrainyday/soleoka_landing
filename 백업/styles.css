@@ -57,26 +57,6 @@ body {
   left: 0;
 }
 
-.bottom-0 {
-  bottom: 0;
-}
-
-.left-0 {
-  left: 0;
-}
-
-.right-0 {
-  right: 0;
-}
-
-.top-2 {
-  top: 0.5rem;
-}
-
-.right-2 {
-  right: 0.5rem;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -141,10 +121,6 @@ body {
   gap: 1.5rem;
 }
 
-.space-y-0\.5 > * + * {
-  margin-top: 0.125rem;
-}
-
 .space-y-2 > * + * {
   margin-top: 0.5rem;
 }
@@ -176,10 +152,6 @@ body {
 
 .mt-1 {
   margin-top: 0.25rem;
-}
-
-.p-2 {
-  padding: 0.5rem;
 }
 
 .p-3 {
@@ -234,14 +206,6 @@ body {
   padding-bottom: 2rem;
 }
 
-.pb-2 {
-  padding-bottom: 0.5rem;
-}
-
-.pb-3 {
-  padding-bottom: 0.75rem;
-}
-
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -258,10 +222,6 @@ body {
   width: 100%;
 }
 
-.w-4 {
-  width: 1rem;
-}
-
 .w-5 {
   width: 1.25rem;
 }
@@ -274,16 +234,8 @@ body {
   width: 2rem;
 }
 
-.w-9 {
-  width: 2.25rem;
-}
-
 .w-10 {
   width: 2.5rem;
-}
-
-.w-12 {
-  width: 3rem;
 }
 
 .w-24 {
@@ -292,10 +244,6 @@ body {
 
 .w-48 {
   width: 12rem;
-}
-
-.h-4 {
-  height: 1rem;
 }
 
 .h-5 {
@@ -310,16 +258,8 @@ body {
   height: 2rem;
 }
 
-.h-9 {
-  height: 2.25rem;
-}
-
 .h-10 {
   height: 2.5rem;
-}
-
-.h-12 {
-  height: 3rem;
 }
 
 .h-24 {
@@ -488,37 +428,6 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.bg-gradient-to-br {
-  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
-}
-
-.from-pink-400 {
-  --tw-gradient-from: #f472b6;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(244 114 182 / 0));
-}
-
-.to-pink-600 {
-  --tw-gradient-to: #ec4899;
-}
-
-.from-orange-400 {
-  --tw-gradient-from: #fb923c;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(251 146 60 / 0));
-}
-
-.to-orange-600 {
-  --tw-gradient-to: #ea580c;
-}
-
-.from-purple-400 {
-  --tw-gradient-from: #c084fc;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(192 132 252 / 0));
-}
-
-.to-purple-600 {
-  --tw-gradient-to: #9333ea;
-}
-
 .drop-shadow-lg {
   filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.1)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
 }
@@ -553,18 +462,6 @@ body {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-.pointer-events-none {
-  pointer-events: none;
-}
-
-.pointer-events-auto {
-  pointer-events: auto;
-}
-
-.opacity-70 {
-  opacity: 0.7;
-}
-
 .hover\:scale-105:hover {
   transform: scale(1.05);
 }
@@ -597,8 +494,8 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.group {
-  position: relative;
+.opacity-70 {
+  opacity: 0.7;
 }
 
 .object-contain {
@@ -618,4 +515,11 @@ body {
   .max-w-md {
     width: 100%;
   }
+}
+
+/* 기존 styles.css 내용 전부 복사 (변경 없음) */
+
+/* 추가: 토스트 애니메이션 부드럽게 */
+#toastNotification .rounded-2xl {
+  transition: all 0.3s ease;
 }
